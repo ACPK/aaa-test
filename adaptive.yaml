@@ -14,7 +14,7 @@ layout:
       password: Password123
       db: demo-db
   services:
-    - name: "gitops-db-demo"
+    - name: "django-demo"
       expose: true
       env:
         SQL_HOST: postgresql
