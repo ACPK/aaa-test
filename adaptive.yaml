@@ -15,7 +15,6 @@ layout:
       db: demo-db
   services:
     - name: "gitops-db-demo"
-      host: gitops-db-demo.adaptivecontent.online
       expose: true
       env:
         SQL_HOST: postgresql
