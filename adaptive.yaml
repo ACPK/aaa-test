@@ -2,7 +2,7 @@ type: Layout
 name: "django-example"
 
 # app metadata
-description: "django example here 1"
+description: "django example here"
 home: https://adaptive.live
 icon: https://demo.adaptivecontent.online/inverse.gif
 
