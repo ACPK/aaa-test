@@ -1,0 +1,31 @@
+type: Layout
+name: "django-example"
+
+# app metadata
+description: "django example"
+home: https://adaptive.live
+icon: https://demo.adaptivecontent.online/inverse.gif
+
+layout:
+  databases:
+    - type: postgresql
+      version: latest
+      username: dbuser
+      password: Password123
+      db: demo-db
+  services:
+    - name: "gitops-db-demo"
+      host: gitops-db-demo.adaptivecontent.online
+      expose: true
+      env:
+        SQL_HOST: postgresql
+        SQL_PORT: 5432
+        SQL_USER: dbuser
+        SQL_ENGINE: django.db.backends.postgresql
+        SQL_DATABASE: demo-db
+        DJANGO_ALLOWED_HOSTS: "*"
+        SECRET_KEY: "some secret"
+      capacity:
+        memory: "200Mi"
+        cpu: "300m"
+        replica: 1
