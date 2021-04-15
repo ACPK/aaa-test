@@ -14,14 +14,14 @@ RUN apk update \
 
 # install dependencies
 RUN pip install --upgrade pip
-COPY ./requirements.txt .
+ADD requirements.txt .
 RUN pip install -r requirements.txt
 
 # copy entrypoint.sh
-COPY ./entrypoint.sh .
+ADD entrypoint.sh .
 
 # copy project
-COPY . .
+ADD . .
 
 # run entrypoint.sh
 ENTRYPOINT ["/usr/src/app/entrypoint.sh"]
