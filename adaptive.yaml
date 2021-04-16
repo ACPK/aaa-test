@@ -20,6 +20,7 @@ layout:
         SQL_HOST: postgresql
         SQL_PORT: 5432
         SQL_USER: dbuser
+        SQL_PASSWORD: Password123
         SQL_ENGINE: django.db.backends.postgresql
         SQL_DATABASE: demo-db
         DJANGO_ALLOWED_HOSTS: "*"
