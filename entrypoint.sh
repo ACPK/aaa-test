@@ -14,7 +14,6 @@ fi
 python manage.py flush --no-input
 python manage.py migrate
 
-
 echo "starting server..."
 
-gunicorn --bind 0.0.0.0:8000 hello_django
+gunicorn --bind 0.0.0.0:80 hello_django.wsgi
